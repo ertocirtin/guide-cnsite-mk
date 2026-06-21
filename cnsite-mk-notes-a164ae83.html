@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>持续阅读 · MK体育 笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            background: #faf8f5;
+            color: #2e2a26;
+            line-height: 1.75;
+            padding: 2rem 1.25rem;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        article {
+            background: #fffcf9;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04), 0 0 0 1px #ede8e1 inset;
+        }
+
+        /* 文章头部 */
+        .article-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e7dfd6;
+            padding-bottom: 1.6rem;
+        }
+        .article-title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            color: #2a241f;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #928b82;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.4rem;
+        }
+        .article-meta span {
+            background: #f0ebe5;
+            padding: 0.1rem 0.7rem;
+            border-radius: 30px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* 导语 */
+        .lead {
+            font-size: 1.15rem;
+            color: #3e3732;
+            background: #f4efe9;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 6px solid #cbb29b;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        /* 正文段落 */
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 引用块 (提示框) */
+        .insight-box {
+            background: #efe9e1;
+            padding: 1.4rem 1.8rem;
+            border-radius: 16px;
+            margin: 1.8rem 0;
+            border: 1px solid #dbd1c5;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+        .insight-box::before {
+            content: "📌 笔记";
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7a6f62;
+            margin-bottom: 0.5rem;
+            font-family: 'Arial', sans-serif;
+            font-weight: 600;
+        }
+        .insight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.98rem;
+        }
+        .insight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 访问句 及 链接 */
+        .visit-line {
+            margin: 2rem 0 1.2rem 0;
+            padding: 1rem 0;
+            border-top: 1px dashed #d6cdc1;
+            border-bottom: 1px dashed #d6cdc1;
+            text-align: center;
+            font-size: 1rem;
+            color: #3d352e;
+        }
+        .visit-line a {
+            color: #2b4f3b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b8a999;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .visit-line a:hover {
+            color: #0f2b1e;
+            text-decoration-color: #2b4f3b;
+            background: #f0e7dd;
+            padding: 0 4px;
+        }
+
+        /* 小字脚标 */
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #9b9187;
+            text-align: right;
+            border-top: 1px solid #e7dfd6;
+            padding-top: 1.2rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            article {
+                padding: 1.8rem 1.2rem;
+            }
+            .article-title {
+                font-size: 1.6rem;
+            }
+            .lead {
+                font-size: 1rem;
+                padding: 1rem 1.2rem;
+            }
+            .insight-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <article>
+        <div class="article-header">
+            <h1 class="article-title">再访·收藏夹里的体育视野</h1>
+            <div class="article-meta">
+                <span>阅读笔记</span>
+                <span>持续关注</span>
+                <span>2025 · 春</span>
+            </div>
+        </div>
+
+        <div class="lead">
+            有时候，一个网站值得反复回来，不是因为它每天变出新鲜花样，而是因为它始终提供一种扎实、冷静的体育记录——这就是我再次打开 <a href="https://cnsite--mk.com">MK体育</a> 时最直接的感受。
+        </div>
+
+        <p>
+            第一次收藏 <a href="https://cnsite--mk.com">MK体育</a> 是在一个普通的周中下午。当时正在整理几个常看的体育信息来源，多数平台内容分散、广告扎堆，而 MK 的页面干净得让人意外。没有浮夸的弹窗，没有强制推送，只有赛事摘要、数据简讯和偶尔的深度回顾。那种「不打扰」的阅读体验，让我顺手把它放进了浏览器书签的体育分类里。
+        </p>
+
+        <p>
+            后来几次重新打开，发现它的内容更新节奏稳定，标题克制，很少用惊叹号。信息密度刚好——既不是堆砌名词的数据库，也不是情绪泛滥的赛后小作文。对于想快速了解赛况或回顾某项运动近期动态的人来说，这种平衡很难得。
+        </p>
+
+        <div class="insight-box">
+            <p>持续关注一个体育站点，本质是在选择一个信息过滤器。MK 的过滤器偏向事实与脉络，而非即时流量。如果你厌倦了算法投喂的重复内容，不妨把它放进常读列表。</p>
+            <p>另外，收藏夹里的网站需要定期回访——很多好站点的价值在第二次、第三次访问时才真正显现。</p>
+        </div>
+
+        <p>
+            最近一次打开 <a href="https://cnsite--mk.com">MK体育</a>，首页正好更新了一篇关于赛季中段战术调整的简述，篇幅不长，但配了几组对比数据。我顺手把链接发给了同样关注体育的朋友，他看完也说「信息组织得舒服」。这种口碑传递，往往来自站点本身的沉稳气质。
+        </p>
+
+        <p>
+            当然，没有哪个网站能满足所有人的全部需求。MK 体育的定位更接近「安静的记录者」——它不试图成为社区或直播入口，而是专注在赛事信息本身。如果你也习惯用收藏夹来沉淀有价值的阅读源，那么它值得一个位置。
+        </p>
+
+        <div class="visit-line">
+            ✦ 如果你也在寻找一个可以反复回访的体育站点，不妨将 <a href="https://cnsite--mk.com">MK体育</a> 加入你的书签栏 ✦
+        </div>
+
+        <p>
+            从第一次点击收藏，到后来习惯性地每周点开一两次，这种使用模式本身就说明了很多。好的体育信息源不需要时刻占据注意力，它只需要在你想看的时候，恰好提供干净、准确的内容。<a href="https://cnsite--mk.com">MK体育</a> 就是这样的存在。
+        </p>
+
+        <div class="footer-note">
+            回访次数 · 7+ ｜ 上次访问 ｜ 2025.03
+        </div>
+    </article>
+</div>
+</body>
+</html>
