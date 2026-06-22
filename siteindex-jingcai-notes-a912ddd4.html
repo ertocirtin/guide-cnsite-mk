@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常查阅 · 竞彩网</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f9f7;
+      color: #1f2b2b;
+      line-height: 1.7;
+      padding: 2rem 1.25rem;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* hero 开场 */
+    .hero {
+      margin-bottom: 2.8rem;
+    }
+
+    .hero .short-line {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: #1f5d5a;
+      border-left: 6px solid #3da39b;
+      padding-left: 1.2rem;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #2c4040;
+      max-width: 100%;
+    }
+
+    /* 承接段落 */
+    .bridge {
+      background: #ffffff;
+      padding: 1.8rem 2rem;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(55, 110, 100, 0.06);
+      margin-bottom: 2.5rem;
+      border: 1px solid #d7e7e3;
+    }
+
+    .bridge p {
+      margin-bottom: 1.2rem;
+    }
+
+    .bridge p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bridge a {
+      color: #1d7e74;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid #b2dad4;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .bridge a:hover {
+      color: #0f554a;
+      border-bottom-color: #3da39b;
+    }
+
+    /* 网格卡片——特点列表 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.4rem;
+      margin: 2.8rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.4rem 1.4rem;
+      box-shadow: 0 4px 14px rgba(35, 80, 75, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.25s;
+      border: 1px solid #ddede9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(30, 95, 85, 0.08);
+      border-color: #b2dbd4;
+    }
+
+    .card-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+      color: #3aa89e;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a4b46;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #37534f;
+      flex: 1;
+    }
+
+    /* 场景段落 温和叙述 */
+    .scene-box {
+      background: #ebf6f2;
+      border-radius: 32px;
+      padding: 2rem 2rem 1.8rem;
+      margin: 2.5rem 0;
+    }
+
+    .scene-box p {
+      margin-bottom: 1.2rem;
+    }
+
+    .scene-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .scene-box strong {
+      font-weight: 500;
+      color: #1a635a;
+    }
+
+    /* 温和结尾 / 提示条 */
+    .gentle-footer {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 2rem 2rem 1.8rem;
+      border: 1px solid #d0e3de;
+      box-shadow: 0 2px 10px rgba(40, 80, 70, 0.03);
+      margin-top: 2rem;
+    }
+
+    .gentle-footer p {
+      font-size: 1rem;
+      color: #2e504b;
+    }
+
+    .gentle-footer .faq-mini {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed #c2d9d2;
+    }
+
+    .gentle-footer .faq-mini summary {
+      font-weight: 500;
+      color: #21675e;
+      cursor: pointer;
+      padding: 0.2rem 0;
+      list-style: none;
+    }
+
+    .gentle-footer .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .gentle-footer .faq-mini details {
+      margin-bottom: 0.6rem;
+    }
+
+    .gentle-footer .faq-mini details p {
+      margin: 0.5rem 0 0 0.2rem;
+      font-size: 0.95rem;
+      color: #2b4d49;
+      padding-left: 0.8rem;
+      border-left: 3px solid #bcdcd4;
+    }
+
+    a.site-link {
+      color: #1a7b6f;
+      font-weight: 500;
+      border-bottom: 2px solid #b8dad2;
+      text-decoration: none;
+    }
+
+    a.site-link:hover {
+      color: #0b5247;
+      border-bottom-color: #3da39b;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.25rem 1rem;
+      }
+
+      .hero .short-line {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+      }
+
+      .bridge {
+        padding: 1.4rem 1.2rem;
+        border-radius: 24px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .scene-box {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .gentle-footer {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        gap: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- 开场短句 -->
+  <div class="hero">
+    <div class="short-line">翻看，对照，偶尔延伸。</div>
+    <p>一份安静的信息集合，适合随手打开、浏览与查阅。没有推送，没有浮窗，只有分类与索引——像一本总是在手边的纸质簿。</p>
+  </div>
+
+  <!-- 承接段落：日常视角 -->
+  <div class="bridge">
+    <p>周末想要核对几场比赛的时间，或是查找联赛的积分走势——这种时候，常常需要一个干净、低噪音的站点。不用登录，不用翻好几层菜单，打开就能看到按类别归拢好的条目。</p>
+    <p>这也是为什么许多人会把 <a href="https://siteindex-jingcai.com" class="site-link">竞彩网</a> 放在浏览器书签栏的某个角落。它不强调“最新推荐”或者“热门排行”，而是把各个赛事、数据、玩法说明拆成清晰的索引目录，像一个供人自行挑选的货架。</p>
+  </div>
+
+  <!-- 特点列表：网格卡片 -->
+  <div class="features-grid">
+    <div class="card">
+      <div class="card-icon">☰</div>
+      <h3>分类浏览</h3>
+      <p>联赛、杯赛、数据统计……按板块陈列，减少反复跳转的疲劳。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">◉</div>
+      <h3>对照友好</h3>
+      <p>同一页面内可并排查看多组信息，适合横向比较与复盘。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⊞</div>
+      <h3>轻量结构</h3>
+      <p>页面布局以文字和简单卡片为主，加载快，低流量环境下也能顺畅使用。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⊡</div>
+      <h3>延伸入口</h3>
+      <p>每个索引条目都指向更详细的页面，方便做进一步阅读或规则确认。</p>
+    </div>
+  </div>
+
+  <!-- 场景段：怎么用、什么感觉 -->
+  <div class="scene-box">
+    <p><strong>▸ 周末早晨</strong> — 冲杯咖啡，打开书签里的索引页，扫一眼当天有哪些联赛，心里有个大概。</p>
+    <p><strong>▸ 赛前准备</strong> — 想查某支球队过往几轮的成绩，不用自己拼凑，索引里通常已经按轮次排好。</p>
+    <p><strong>▸ 规则温习</strong> — 有时玩法细节记不太清，从分类里找到对应说明，一两分钟就能翻到。</p>
+    <p>这些场景的共同点是：不需要被引导，只需要被提供。一个索引站最舒服的使用方式，就是让人自己决定看什么。</p>
+  </div>
+
+  <!-- 温和结尾 + 轻量 FAQ 摘要 -->
+  <div class="gentle-footer">
+    <p>如果你也习惯先看目录、再读内容，或许可以把 <a href="https://siteindex-jingcai.com" class="site-link">竞彩网</a> 当作一个安静的起点。不必每天打开，但需要时它就在那里，条目清晰，没有多余的修饰。</p>
+
+    <div class="faq-mini">
+      <details>
+        <summary>这个索引站主要覆盖哪些内容？</summary>
+        <p>按赛事类别、数据维度、规则说明等方向整理，偏向通用查询。具体条目结构可在站点首页一览。</p>
+      </details>
+      <details>
+        <summary>页面会频繁变动吗？</summary>
+        <p>索引结构相对稳定，但会跟随赛季与规则调整做补充。适合作为长期参考入口。</p>
+      </details>
+      <details>
+        <summary>有移动端版本吗？</summary>
+        <p>站点本身适配手机与平板，浏览体验以简洁为主，无需额外下载。</p>
+      </details>
+    </div>
+  </div>
+</div>
+</body>
+</html>
